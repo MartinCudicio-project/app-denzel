@@ -4,14 +4,46 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.collapsible');
+            var instances = M.Collapsible.init(elems);
+            instances.open(1);
+        });
+    </script>
+    <script>
+       document.addEventListener('DOMContentLoaded', function() {
+          var elems = document.querySelectorAll('.modal');
+          var instances = M.Modal.init(elems);
+          instances.open()
+        });
+    </script>
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>             
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>   
+
+    <!-- <link href="nouislider.css" rel="stylesheet">
+    <script src="nouislider.js"></script>
+    <script>
+      var slider = document.getElementById('slider');
+      noUiSlider.create(slider, {
+          start: [20, 80],
+          connect: true,
+          range: {
+              'min': 0,
+              'max': 100
+          }
+      });</script> -->
   </head>
   <body>
+   
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
-    <div id="app"></div>
+    
+    <div id="app"></div>    
     <!-- built files will be auto injected -->
   </body>
 </html>
