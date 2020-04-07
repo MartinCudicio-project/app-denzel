@@ -1,5 +1,5 @@
 import axios from 'axios';
-const apiBaseUrl = 'http://localhost:3000';
+const apiBaseUrl = 'https://nifty-noyce-ad1b9f.netlify.com/.netlify/functions/app';
 
 export default class PostService {
 
