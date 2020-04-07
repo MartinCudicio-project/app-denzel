@@ -4,23 +4,23 @@
     <div class="row">
         <div class="col s12">
             <ul class="tabs">
-                <li class="tab col s3"><a href="#test1">All movies</a></li>
-                <li class="tab col s3"><a class="active" href="#test2">Search a movie with filter</a></li>
+                <li class="tab col s3"><a href="#AllMovies">All movies</a></li>
+                <li class="tab col s3"><a class="active" href="#FilterMovies">Search a movie with filter</a></li>
                 <li class="tab col s3 disabled"><a href="#test3">Disabled Tab</a></li>
                 <li class="tab col s3"><a href="#test4">Test 4</a></li>
             </ul>
         </div>
-        <div id="test1" class="col s12">
+        <div id="AllMovies" class="col s12">
             <div class="container">
                 <div class="row">
                     <div class="col s3" v-for="(movie,index) in movies"
                     v-bind:item="movie"
                     v-bind:index="index"
                     v-bind:key="movie.id">
-                        <div class="card">
+                        <div id="cardAllMovies" class="card">
                             <div class="card-image waves-effect waves-block waves-light">
                                 <img class="activator" :src="movie.poster">
-                                <a class="btn-floating halfway-fab waves-effect waves-light red" :href="'/infoMovie/'+movie.id"><i class="material-icons">add</i></a>
+                                <a class="btn-floating halfway-fab waves-effect waves-light red" :href="'/infoMovie/'+movie.id"><i class="material-icons">search</i></a>
                             </div>
                             <div class="card-content activator grey-text text-darken-4">
                                 <p>{{movie.title}}</p>
@@ -35,7 +35,7 @@
             </div>
         </div>   
 
-        <div id="test2" class="col s12">
+        <div id="FilterMovies" class="col s12">
             <div class="row">
                 <div id="left" class="col s5">
                     <div class="container">
@@ -92,12 +92,17 @@
                         </div>
                         <br/>
                         <div class="row">
-                            <div class="col s6">
-                                <a class="waves-effect waves-light btn" v-on:click="resetFilter()">reset</a>
+                            <div class="center-align">
+                                <div class="col s6">
+                                    <a id="btnFilter" align="center" class="waves-effect waves-light btn" v-on:click="resetFilter()">reset</a>
+                                </div>
                             </div>
-                            <div class="col s6">
-                                <a class="waves-effect waves-light btn" v-on:click="searchMovie()">search</a>
+                            <div class="center-align">
+                                <div class="col s6">
+                                    <a id="btnFilter" class="waves-effect waves-light btn" v-on:click="searchMovie()">search</a>
+                                </div>
                             </div>
+                            
                         </div>
                         
                     </div>
@@ -105,17 +110,15 @@
                 <div id="right" class="col s7">
                     <div class="col s12">
                         <div class="center-align">
-                            ma liste de films filtrés
-
                             <div  class="row">
                                 <div class="col s3" v-for="(movie,index) in movies"
                                 v-bind:item="movie"
                                 v-bind:index="index"
                                 v-bind:key="movie.id">
-                                    <div class="card">
+                                    <div id="cardFilter" class="card"> 
                                         <div class="card-image waves-effect waves-block waves-light">
                                             <img class="activator" :src="movie.poster">
-                                            <a class="btn-floating halfway-fab waves-effect waves-light red" :href="'/infoMovie/'+movie.id"><i class="material-icons">add</i></a>
+                                            <a class="btn-floating halfway-fab waves-effect waves-light red" :href="'/infoMovie/'+movie.id"><i class="material-icons">search</i></a>
                                         </div>
                                         <div class="card-content activator grey-text text-darken-4">
                                             <p>{{movie.title}}</p>
@@ -340,8 +343,12 @@ export default {
 
 
 <style scoped>
-.card {
-    height: 400px;
+#cardAllMovies {
+    height: 420px;
+}
+
+#cardFilter{
+    height : 350px;
 }
 .btn-floating {
   bottom: 3px;
@@ -352,5 +359,8 @@ export default {
     height: 600px;
 }
 
+#btnFilter {
+    width: 200px;
+}
 
 </style>
