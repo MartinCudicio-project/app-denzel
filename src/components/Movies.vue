@@ -42,7 +42,7 @@
                         <div class="row">
                             <div class="center-align">
                                 <br/> 
-                                <h5  class="dark-text text-darken-2">Mes filtres</h5>
+                                <h5  class="dark-text text-darken-2">Search a movie with the folowing filters</h5>
                                 <br/>
                                 <h6  align="center" class="dark-text text-darken-2">Filter Date</h6>
                                 <div class="row">

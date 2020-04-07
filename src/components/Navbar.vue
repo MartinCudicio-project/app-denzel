@@ -1,7 +1,7 @@
 <template>
     <nav>
     <div class="nav-wrapper">
-      <a href="/" class="brand-logo right">movies</a>
+      <a href="/" class="brand-logo center">Denzel Movies</a>
     </div>
   </nav>
 </template>
