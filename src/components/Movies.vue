@@ -4,10 +4,8 @@
     <div class="row">
         <div class="col s12">
             <ul class="tabs">
-                <li class="tab col s3"><a href="#AllMovies">All movies</a></li>
-                <li class="tab col s3"><a class="active" href="#FilterMovies">Search a movie with filter</a></li>
-                <li class="tab col s3 disabled"><a href="#test3">Disabled Tab</a></li>
-                <li class="tab col s3"><a href="#test4">Test 4</a></li>
+                <li class="tab col s6"><a class="active" href="#AllMovies">All movies</a></li>
+                <li class="tab col s6"><a href="#FilterMovies">Search a movie with filter</a></li>
             </ul>
         </div>
         <div id="AllMovies" class="col s12">
@@ -94,12 +92,12 @@
                         <div class="row">
                             <div class="center-align">
                                 <div class="col s6">
-                                    <a id="btnFilter" align="center" class="waves-effect waves-light btn" v-on:click="resetFilter()">reset</a>
+                                    <a id="btnFilter" align="center" class="waves-effect btn" v-on:click="resetFilter()">reset</a>
                                 </div>
                             </div>
                             <div class="center-align">
                                 <div class="col s6">
-                                    <a id="btnFilter" class="waves-effect waves-light btn" v-on:click="searchMovie()">search</a>
+                                    <a id="btnFilter" class="waves-effect btn" v-on:click="searchMovie()">search</a>
                                 </div>
                             </div>
                             
@@ -135,10 +133,6 @@
                 </div>
             </div>
         </div>
-
-        <div id="test3" class="col s12">Test 3</div>
-        
-        <div id="test4" class="col s12">Test 4</div>
     </div>
     
 </body>
