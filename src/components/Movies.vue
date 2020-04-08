@@ -4,9 +4,11 @@
     <div class="row">
         <div class="col s12">
             <ul class="tabs">
-                <li class="tab col s6"><a class="active" href="#AllMovies">All movies</a></li>
-                <li class="tab col s6"><a href="#FilterMovies">Search a movie with filter</a></li>
+                <li class="tab col s4"><a class="active" href="#AllMovies">All movies</a></li>
+                <li class="tab col s4"><a href="#FilterMovies">Search a movie with filter</a></li>
+                <li class="btn tab col s4" v-on:click="mustWatchMovie()">must Watch Movie</li>
             </ul>
+            
         </div>
         <div id="AllMovies" class="col s12">
             <div class="container">
@@ -148,6 +150,7 @@ const wNumb = require('wnumb')
 // import M from 'materialize-css'
 import noUiSlider from 'nouislider';
 import 'nouislider/distribute/nouislider.css';
+import router from '../router';
 
 export default {
     name:'Movies',
@@ -328,6 +331,13 @@ export default {
                 console.log(resp.data.length)
                 this.movies = resp.data
             });
+        },
+        mustWatchMovie(){
+            postService.getMustWatch()
+            .then(res=>{
+                const id = res.data.id
+                router.push(`/infoMovie/${id}`)
+            })
         }
     }
 }

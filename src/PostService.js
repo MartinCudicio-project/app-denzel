@@ -18,4 +18,8 @@ export default class PostService {
     addReview(id,pseudo,text,score){
         return axios.post(`${apiBaseUrl}/movies/review`,{id,pseudo,text,score})
     }
+
+    getMustWatch(){
+        return axios.get(`${apiBaseUrl}/movies/must-watch`)
+    }
 }
