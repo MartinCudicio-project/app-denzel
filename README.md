@@ -12,6 +12,8 @@ There is also the presence of a search button, to display a movie in more detail
 
 In the more detail vue. We can see the different scores. We can also consult the notices (if there are any), and post a new one
 
+<img width="1440" alt="Capture d’écran 2020-04-08 à 17 39 50" src="https://user-images.githubusercontent.com/52409311/78804208-26cef300-79c0-11ea-940b-b7c7bb4101c3.png">
+
 
 ## Project setup
 ```
