@@ -8,7 +8,7 @@ In the home, we offer to see all movies, movies filtered by date and score and a
 for each movie card, if we click on the image, then we can see a description of the movie
 There is also the presence of a search button, to display a movie in more detail.
 
-
+<img width="1434" alt="Capture d’écran 2020-04-08 à 17 39 31" src="https://user-images.githubusercontent.com/52409311/78804048-fedf8f80-79bf-11ea-83bf-92e006672edf.png">
 
 In the more detail vue. We can see the different scores. We can also consult the notices (if there are any), and post a new one
 
