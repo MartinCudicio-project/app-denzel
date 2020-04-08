@@ -3,6 +3,9 @@
 Work from Martin Cudicio
 Web APP to see all of Denzel Washington's movies
 
+My web app is deployed with netlify
+go on this link : https://denzel-martincudicio.netlify.com
+
 In the home, we offer to see all movies, movies filtered by date and score and a must see movie
 
 for each movie card, if we click on the image, then we can see a description of the movie
